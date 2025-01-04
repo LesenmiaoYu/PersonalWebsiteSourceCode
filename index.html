@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./flowers.png" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesenmiao's World</title>
+  </head>
+  <body>
+    
+
+    <div class="experience">
+      <canvas class="experience-canvas"></canvas>
+    </div>
+
+    <div id="welcome-section">
+      <h1>LESENMIAO'S WORLD</h1>
+      <p>Scroll or drag around to learn more...</p>
+      <p style="font-family: 'MyCustomFont', sans-serif; font-size: 1.5rem; color: #ffffff; margin: 10px 0 0; padding: 0;">(yes, this is my own writing)</p>
+    </div>
+
+    <audio autoplay loop>
+      <source src="./public/Lofi.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="content">
+      <!-- Section 1: Text left, image right -->
+      <section class="content-section image-right">
+        <div class="text-container">
+          <h1>As way of introduction:</h1>
+          <p>Hello! I'm Lesenmiao "David" Yu, a passionate professional at the intersection of Computer Science, Business Administration, and Psychology. With a GPA of 3.9 and dual degrees from the University of Southern California, I bring a unique blend of technical expertise, business acumen, and a deep understanding of human behavior to everything I do.</p>
+          <p>Over the years, I’ve honed my skills across diverse roles, from developing innovative tech solutions as a Full-Stack Web Developer to leading business transformation projects as a Product Manager. My experience spans product management, data analytics, and marketing strategy, always with a focus on leveraging cutting-edge technology to drive measurable results.</p>
+
+        </div>
+        <div class="image-container">
+          <img src="./personal.png" alt="Introduction Image" />
+        </div>
+      </section>
+      <br/>
+
+      <!-- Section 2: Image left, text right -->
+      <section class="content-section image-left">
+        <div class="image-container">
+          <img src="./flowers.png" alt="Experience Image" />
+        </div>
+        <div class="text-container">
+          <h1>My experience:</h1>
+          <p>I’ve had the chance to explore a lot of different paths, from building web platforms as a Full-Stack Developer to managing products and leading marketing strategies. I’ve started my own business, worked on healthcare projects, and even dived into data analytics—all of it giving me a mix of technical, creative, and business skills.</p>
+          <p>What I love most is learning and trying new things. Every role I’ve taken on has taught me something new and helped me see challenges from fresh perspectives. Whether it’s launching a product or brainstorming the next big idea, I’m always excited to keep growing and exploring.</p>
+          <p style="font-family: 'MyCustomFont', sans-serif; font-size: 1.5rem; margin: 10px 0 0; padding: 0; color: #000000;">
+            My life in one page of PDF?
+            <a href="#" style="color: #2c5f34; text-decoration: underline;" onclick="downloadPDF(event)">here it is</a>.
+          </p>
+        </div>
+      </section>
+      <br/>
+
+      <!-- Section 3: Text left, image right -->
+      <section class="content-section image-right" id="projects-section">
+        <div class="text-container">
+          <h1>My Projects:</h1>
+          <div class="button-row">
+            <button class="project-button" onclick="toggleDetails(1)">PERSONAL WEBSITE</button>
+            <button class="project-button" onclick="toggleDetails(2)">MBRL DASHBOARD</button>
+            <button class="project-button" onclick="toggleDetails(3)">ELC ROLEPLAY</button>
+            <button class="project-button" onclick="toggleDetails(4)">HOX</button>
+            <button class="project-button" onclick="toggleDetails(5)">PARK FINDER</button>
+            <button class="project-button" onclick="toggleDetails(6)">EAT</button>
+          </div>
+          <p>Click on the buttons to learn more about the projects</p>
+          <p>All repos are available for download upon clicking the title!</p>
+          <div class="project-details" id="details1">
+            <h2>Personal Website</h2>
+            <p>My personal website is more than a portfolio—it’s a reflection of my creativity, technical skills, and passion for exploring new tools. What started as a fun side project became a meaningful way to showcase my work and journey.</p>
+
+            <p>I designed, developed, and deployed every aspect myself, using tools like React, JavaScript, CSS, Blender, and 3.js. Blender introduced me to 3D modeling, while 3.js added interactive visuals, pushing me to learn and grow.</p>
+
+            <p>Challenges included my initial plans for complex animations and camera movements, which proved too ambitious. I adapted by creating an open, exploratory design where users can interact freely, resulting in a more intuitive experience.</p>
+
+            <p>The website was an exercise in persistence, from research and experimentation to hosting on GitHub Pages. The result is something I’m proud of—visually unique, functional, and truly mine.</p>
+
+            <p>Beyond the technical skills, this project taught me to think like a web developer, focusing on user experience and adaptability. It’s a living project I plan to expand, adding new features and reflecting my growth as a developer.</p>          </div>
+          <div class="project-details" id="details2">
+            <h2>
+              <a href="/public/Repos/MBRL.zip" download="MBRLDashboard.zip" style="text-decoration: none; color: inherit;">
+                MBRL Dashboard
+              </a>
+            </h2>
+            <p>The MBRL Dashboard solves a critical problem: scattered data. Researchers and administrators at the USC Marshall Lab needed a centralized platform for visualizing and aggregating their data, and this dashboard became the solution, automating the process with API calls and other tools.</p>
+
+            <p>As the sole developer, I managed every aspect, from designing the architecture to deployment. This project marked my first experience writing backend endpoints and deploying a site using AWS, pushing me to learn new skills and adapt quickly.</p>
+
+            <p>The project relied on Flask, React, SQLite, and AWS EC2. Building the dashboard was straightforward, but deploying it on AWS was a steep learning curve. Documentation and persistence were key to overcoming these challenges.</p>
+
+            <p>The dashboard has made an immediate impact, saving researchers countless hours by streamlining data aggregation and visualization. Stakeholders were thrilled with the results, and its functionality has the potential to benefit the lab for years to come.</p>
+
+            <p>This project strengthened my technical skills and allowed me to grow as a project leader. While it’s still a work in progress, I’m proud of its success and plan to enhance it further with debugging and verification processes. It’s hosted on GitHub and stands as a testament to my growth as a developer.</p>
+
+          </div>
+          <div class="project-details" id="details3">
+
+            <h2>
+              <a href="/public/Repos/ELC.zip" download="ELCRoleplayPlatform.zip" style="text-decoration: none; color: inherit;">
+                ELC Roleplay Platform
+              </a>
+            </h2>
+            <p>The ELC Roleplay Platform was created to enhance interactive learning by offering a scalable, multi-user environment for roleplay exercises. Designed for the USC Experiential Learning Center, it facilitates seamless collaboration and scenario-based learning for students and educators.</p>
+
+            <p>As the frontend developer, I focused on building a dynamic, user-friendly interface using React to ensure smooth interactions and an intuitive design. This was a critical component for creating an engaging learning experience.</p>
+
+            <p>One of the key challenges was implementing responsive and interactive features to support real-time collaboration across multiple users. By leveraging React’s component-based architecture, I ensured the platform could handle complex interactions efficiently.</p>
+
+            <p>Hosted on DigitalOcean, the platform is a powerful tool that has transformed how roleplay exercises are conducted. It’s a testament to the potential of technology in education and my ability to design interfaces that enhance user experiences.</p>
+
+          </div>
+          <div class="project-details" id="details4">
+            <h2>
+              <a href="/public/Repos/HOX.zip" download="HOXWebsite.zip" style="text-decoration: none; color: inherit;">
+                HOX Website
+              </a>
+            </h2>
+            <p>Eta Omega Chi (HOX) is a national Asian fraternity at USC, dedicated to fostering community through social bonding and professional development. As president, I led the creation of a static website to support our recruitment process, marking a pivotal project for our organization.</p>
+
+            <p>The website was built using HTML and served as a starting point for my journey into web development. It was also my introduction to Figma, where I explored the basics of UI/UX design to create a clean and functional layout that reflected HOX's values and mission.</p>
+
+            <p>This project taught me the fundamentals of web development and design while providing a platform to streamline recruitment and showcase our fraternity to potential members. It remains a significant milestone in my growth as a developer and leader.</p>
+
+          </div>
+          <div class="project-details" id="details5">
+            <h2>
+              <a href="/public/Repos/PARK.zip" download="ParkFinder.zip" style="text-decoration: none; color: inherit;">
+                Park Finder
+              </a>
+            </h2>
+            <p>Park Finder is an academic project that utilizes the National Park API to showcase information about national parks across the U.S. The platform allows users to explore parks with an intuitive and user-friendly interface.</p>
+
+            <p>As the frontend developer, I was responsible for designing and implementing the user interface, ensuring a seamless experience. This project also introduced me to web security concepts, where we focused on building secure and reliable applications.</p>
+
+            <p>We incorporated extensive testing using Gherkin and JUnit to validate functionality and ensure robustness. These practices strengthened the platform’s reliability and gave me valuable insights into professional software testing methodologies.</p>
+
+            <p>This project was a foundational experience that deepened my understanding of frontend development, testing strategies, and web security principles, preparing me for future real-world applications.</p>
+
+          </div>
+          <div class="project-details" id="details6">
+            <h2>
+              <a href="/public/Repos/EAT.zip" download="EAT.zip" style="text-decoration: none; color: inherit;">
+                EAT! Web Application
+              </a>
+            </h2>
+            <p>EAT! is a web application designed to enhance the dining experience at USC by providing a platform where students can review and rate dining hall meals. With features like real-time reviews, personalized recommendations, and wait time updates, EAT! helps students make informed dining choices.</p>
+
+            <p>As a team member, I contributed to both frontend development and feature design, using HTML, CSS, and Figma to create a user-friendly interface. On the backend, the project utilized Java, Spring Framework, and MySQL to manage data securely and efficiently.</p>
+
+            <p>We incorporated advanced functionality such as multithreaded interactions for likes and dislikes, along with personalized user profiles. This project also introduced me to password encryption and database management, deepening my technical expertise.</p>
+
+            <p>EAT! was a rewarding experience that showcased the power of collaboration and innovation in solving real-world problems. It’s a practical tool that continues to serve the USC community by simplifying dining decisions.</p>
+
+          </div>
+          <br />
+        </div>
+        <div class="image-container">
+          <img src="./desk.png" alt="Projects Image" />
+        </div>
+      </section>
+      <br />
+
+      <!-- Section 4: Image left, text right -->
+      <section class="content-section image-left">
+        <div class="image-container">
+          <img src="./contact.png" alt="Contact Image" />
+        </div>
+        <div class="text-container">
+          <h1>Contact me:</h1>
+          <p>I’m committed to continuous growth and making a meaningful impact in the communities I serve. Whether optimizing healthcare processes, designing scalable tech platforms, or pioneering new products, I approach each challenge with creativity, precision, and a results-driven mindset.</p>
+          <p>When I’m not working, you can find me exploring music, playing MOBAs, or enjoying the great outdoors. Feel free to explore my projects, connect with me, or just say hi!</p>
+          <br/>
+          <div class="contact-icons">
+            <a href="mailto:dyu18149@usc.edu" target="_blank">
+              <i class="fas fa-envelope" title="Email"></i>
+            </a>
+            <a href="tel:+12138003788" target="_blank">
+              <i class="fas fa-phone" title="Phone"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/Lesenmiao-Yu" target="_blank">
+              <i class="fab fa-linkedin" title="LinkedIn"></i>
+            </a>
+            <a href="https://github.com/LesenmiaoYu" target="_blank">
+              <i class="fab fa-github" title="GitHub"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+      <br/>
+    </div>
+
+    <footer id="footer">
+      Thank you for visiting!
+    </footer>
+
+    <script type="module" src="/main.js"></script>
+    <script>
+      function downloadPDF(event) {
+        event.preventDefault();
+        const link = document.createElement('a');
+        // Update the href with the direct raw GitHub URL to your file
+        link.href = 'https://raw.githubusercontent.com/LesenmiaoYu/LesenmiaoYu.github.io/main/public/LesenmiaoYu_CV.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+
+      function toggleDetails(id) {
+        const section = document.getElementById('projects-section');
+        const details = document.getElementById(`details${id}`);
+
+        // Hide all other project details
+        document.querySelectorAll('.project-details').forEach(detail => {
+          detail.style.display = 'none';
+        });
+
+        // Show the selected project details
+        details.style.display = 'block';
+
+        // Expand the section height to fit the content
+        section.classList.add('expanded');
+      }
+    </script>
+
+  </body>
+</html>

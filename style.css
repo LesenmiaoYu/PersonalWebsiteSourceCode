@@ -1,0 +1,267 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('./Mywriting-Regular.ttf') format('truetype');
+}
+
+/* Body styling with a new background */
+body {
+  height: auto; /* Adjust height for total scrollable area */
+  overflow-y: scroll; /* Enable vertical scrolling */
+  background-color: #2c5f34; /* Replace with your desired background color */
+  background-size: cover; /* Ensures the background image covers the viewport */
+}
+
+/* Fullscreen container for the 3D experience */
+.experience {
+  position: relative;
+  width: 100%;
+  height: 70vh; /* Adjusted height for the canvas */
+  z-index: 1; /* Ensure it stays above the background but below content */
+  overflow: hidden; /* Prevent scrolling within this section */
+}
+
+/* Canvas for the 3D model, restricted to the experience container */
+.experience-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Section below the canvas */
+#welcome-section {
+  position: relative;
+  width: 100%;
+  height: 30vh; /* 30% of the viewport height */
+  background-color: #2c5f34; /* Dark green color */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center text alignment */
+  color: #ffffff; /* White text color for contrast */
+}
+
+#welcome-section h1 {
+  font-size: 4rem; /* Large text size */
+  margin: 0; /* Remove default margins */
+  padding: 0; /* Remove default paddings */
+}
+
+#welcome-section p {
+  font-family: 'MyCustomFont', sans-serif;
+  font-size: 2.5rem; /* Smaller text size for the subtext */
+  margin: 10px 0 0; /* Add slight spacing below the heading */
+  padding: 0; /* Remove default paddings */
+  color: #ffffff; /* White text color for contrast */
+}
+
+#footer {
+  position: relative; /* Relative to the content flow */
+  text-align: right; /* Align text to the right */
+  margin: 20px 10px; /* Add some spacing around the footer */
+  font-size: 2rem; /* Adjust the font size */
+  color: #ffffff; /* Use the same dark green color for consistency */
+  font-family: 'MyCustomFont', sans-serif; /* Apply the custom font */
+}
+
+/* Content section after the 3D experience */
+#content {
+  position: relative; /* Ensure stacking context for content */
+  z-index: 2; /* Place content above the canvas */
+  margin-top: 0; /* Remove blank space between canvas and content */
+  padding-top: 5vh; /* Optional: Add a small gap for aesthetics */
+}
+
+#content h1 {
+  font-family: 'MyCustomFont', sans-serif;
+  font-size: 4rem; /* Smaller text size for the subtext */
+  margin: 10px 0 0; /* Add slight spacing below the heading */
+  padding: 0; /* Remove default paddings */
+  color: #000000; /* White text color for contrast */
+}
+
+#content p {
+  font-size: 1.4rem; /* Smaller text size for the subtext */
+  margin: 20px 0 0; /* Add slight spacing below the heading */
+  padding: 0; /* Remove default paddings */
+  color: #000000; /* White text color for contrast */
+  line-height: 1.5;
+}
+
+
+
+
+/* General styling for sections */
+section.content-section {
+  padding-left: 20px; /* Add horizontal padding on the left */
+  padding-right: 20px; /* Add horizontal padding on the right */
+  display: flex; /* Use Flexbox for horizontal layout */
+  align-items: center; /* Vertically center align items */
+  background-color: white; /* Set background color for content */
+  color: black; /* Ensure text is visible */
+  width: 100%; /* Full width for the section */
+  margin: 0; /* Remove extra spacing */
+}
+
+/* Image on the right */
+.image-right {
+  flex-direction: row; /* Default order: text first, image second */
+}
+
+.image-right .text-container {
+  text-align: left; /* Align text to the left */
+}
+
+.image-right .image-container {
+  order: 2; /* Explicitly place the image on the right */
+}
+
+/* Image on the left */
+.image-left {
+  flex-direction: row-reverse; /* Reverse order: image first, text second */
+}
+
+.image-left .text-container {
+  text-align: right; /* Align text to the right */
+}
+
+.image-left .image-container {
+  order: 1; /* Explicitly place the image on the left */
+}
+
+/* Text Container Styling */
+.text-container {
+  flex: 3; /* Text takes up 3 parts of the space */
+  padding: 5rem 5rem; /* Increased padding for better readability */
+
+}
+
+/* Image Container Styling */
+.image-container {
+  flex: 1; /* Image takes up 1 part of the space */
+  display: flex; /* Ensure proper alignment within */
+  justify-content: center; /* Center the image inside the container */
+}
+
+.image-container img {
+  height: 30vh; /* Maintain aspect ratio */
+  width: auto;
+  display: block; /* Remove inline space */
+}
+
+#contact {
+  text-align: center;
+  margin: 50px 0;
+  padding: 20px;
+}
+
+#contact h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: right;
+  gap: 20px; /* Spacing between icons */
+}
+
+.contact-icons a {
+  font-size: 2rem; /* Size of icons */
+  color: #333; /* Default color */
+  text-decoration: none;
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.contact-icons a:hover {
+  color: #2c5f34; /* Highlight color on hover */
+}
+
+.contact-icons i {
+  cursor: pointer;
+}
+
+
+
+/* Updated Button Row for Scrolling and Max Width */
+.button-row {
+  display: flex;
+  justify-content: start;
+  gap: 10px; /* Reduced gap for better spacing */
+  margin-top: 20px;
+  overflow-x: scroll; /* Enable horizontal scrolling */
+  max-width: 70vw; /* Constrain the button row to 70% of the viewport width */
+  padding-bottom: 10px; /* Padding to prevent scrollbar overlap */
+  scrollbar-width: thin; /* Thin scrollbar for Firefox */
+}
+
+.button-row::-webkit-scrollbar {
+  height: 8px; /* Thin scrollbar for WebKit browsers */
+}
+
+.button-row::-webkit-scrollbar-thumb {
+  background: #2c5f34; /* Match scrollbar with button color */
+  border-radius: 10px; /* Rounded scrollbar thumb */
+}
+
+.project-button {
+  font-family: 'MyCustomFont', sans-serif; /* Use custom font */
+  font-size: 1.2rem; /* Slightly smaller font */
+  color: #ffffff; /* White font color */
+  background-color: #2c5f34; /* Green background */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Optional: Add slight rounded corners */
+  padding: 15px; /* Adjust padding for compact look */
+  cursor: pointer;
+  width: 120px; /* Reduced button size */
+  height: 120px; /* Keep buttons square */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s ease, background-color 0.2s ease; /* Smooth hover effect */
+}
+
+.project-button:hover {
+  transform: scale(1.02); /* Slightly enlarge on hover */
+  background-color: #1d3d22; /* Darker green for hover effect */
+}
+
+/* Project Details Default and Expanded Section */
+.project-details {
+  display: none; /* Initially hidden */
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.content-section.expanded {
+  height: auto; /* Expand to fit content */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.project-details h2 {
+  margin-bottom: 10px;
+}
+
+.project-details p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
