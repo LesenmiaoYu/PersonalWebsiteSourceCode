@@ -7,7 +7,7 @@
 
 @font-face {
   font-family: 'MyCustomFont';
-  src: url('/PersonalWebsiteSourceCode/Mywriting-Regular.ttf') format('truetype');
+  src: url('/public/Mywriting-Regular.ttf') format('truetype');
 }
 
 /* Body styling with a new background */
